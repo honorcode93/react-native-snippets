@@ -6,13 +6,12 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 import {
-  StyleSheet,
   View,
 } from 'react-native';
 
 import styles from './style';
 
-class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:MyComponent}} extends Component {
+class ${TM_FILEPATH/^.*\/([^\/]+)\/[^\/]+$/$1/} extends Component {
   constructor() {
     super();
 
@@ -26,9 +25,8 @@ class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:MyComponent}} extends Component {
   }
 }
 
-${1:${TM_FILENAME/(.+)\..+|.*/$1/:MyComponent}}.propTypes = {};
-${1:${TM_FILENAME/(.+)\..+|.*/$1/:MyComponent}}.defaultProps = {};
-
+${TM_FILEPATH/^.*\/([^\/]+)\/[^\/]+$/$1/}.propTypes = {};
+${TM_FILEPATH/^.*\/([^\/]+)\/[^\/]+$/$1/}.defaultProps = {};
 
 function mapStateToProps(stores) {
   return {
@@ -49,7 +47,7 @@ function mapDispatchToProps(dispatch) {
   );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(${1:${TM_FILENAME/(.+)\..+|.*/$1/:MyComponent}});
+export default connect(mapStateToProps, mapDispatchToProps)(${TM_FILEPATH/^.*\/([^\/]+)\/[^\/]+$/$1/});
 
 ]]></content>
   <tabTrigger>rnccwr</tabTrigger>

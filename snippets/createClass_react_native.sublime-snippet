@@ -4,13 +4,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  StyleSheet,
   View,
 } from 'react-native';
 
 import styles from './style';
 
-class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:MyComponent}} extends Component {
+class ${TM_FILEPATH/^.*\/([^\/]+)\/[^\/]+$/$1/} extends Component {
   constructor() {
     super();
 
@@ -21,32 +20,13 @@ class ${1:${TM_FILENAME/(.+)\..+|.*/$1/:MyComponent}} extends Component {
     return (
       ${2:<View />}
     );
-  }a
+  }
 }
 
-${1:${TM_FILENAME/(.+)\..+|.*/$1/:MyComponent}}.propTypes = {};
-${1:${TM_FILENAME/(.+)\..+|.*/$1/:MyComponent}}.defaultProps = {};
+${TM_FILEPATH/^.*\/([^\/]+)\/[^\/]+$/$1/}.propTypes = {};
+${TM_FILEPATH/^.*\/([^\/]+)\/[^\/]+$/$1/}.defaultProps = {};
 
-function mapStateToProps(stores) {
-  return {
-    /* Your prop mapping here */
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  const combiner = Object.assign(
-    {},
-    /* Action functions here */
-    { dispatch },
-  );
-
-  return bindActionCreators(
-    combiner,
-    dispatch,
-  );
-}
-
-export default ${1:${TM_FILENAME/(.+)\..+|.*/$1/:MyComponent}};
+export default ${TM_FILEPATH/^.*\/([^\/]+)\/[^\/]+$/$1/};
 
 ]]></content>
   <tabTrigger>rncc</tabTrigger>
